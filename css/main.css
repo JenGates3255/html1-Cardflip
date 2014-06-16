@@ -8,16 +8,14 @@
 		-webkit-backface-visibility
 */
 
-#portfolio {
-	text-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
+
 
 .portfolio-item{
 	position: relative;
 }
 
 .back{
+	-webkit-transform:rotateY(-180deg);
     position: absolute;
 	top: 0;
 	left: 0;
@@ -29,6 +27,10 @@
 .portfolio-item:hover .front{
 	opacity: 0;
 	transition-duration:2s;
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility:hidden;
+
 }
 
 
@@ -36,4 +38,7 @@
 	z-index: 0;
 	opacity: 1.0;
 	transition-duration:2s;
+	-webkit-transform:rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility:;
 	}
